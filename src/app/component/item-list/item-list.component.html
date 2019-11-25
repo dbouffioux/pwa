@@ -1,0 +1,8 @@
+<ng-container *ngFor="let item of items">
+  <app-item
+    (deleteEmitter)="deleteItem($event)"
+    [item]="item">
+  </app-item>
+</ng-container><br>
+<button mat-mini-fab (click)="openDialog()">Add</button>
+<br><br>

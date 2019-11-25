@@ -1,0 +1,13 @@
+npm install @angular/pwa
+ng build --prod
+# db locale utile pour progressive web app
+npm install ngx-indexed-db
+#faire tourner en local en  mode prod le build de l'app angular
+npm install -g http-server 
+http-server -c-1 dist\store-app
+> lancer sur http://localhost:8080/index.html (les ip données ne fonctionnent pas)
+
+-- librairies -- 
+npm install --save ngx-webcam
+api-localisation
+https://www.npmjs.com/package/angular-notifier

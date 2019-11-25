@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-title>
+    <p>Titre: {{ item.title }}</p>
+  </mat-card-title>
+  <mat-card-content>
+    <p>Description: {{ item.description }}</p>
+    <img mat-card-image [src]="item.image" />
+    <button mat-icon-button color="warn" (click)="deleteItem(item)">Delete</button>
+  </mat-card-content>
+</mat-card>

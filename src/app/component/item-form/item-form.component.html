@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Add item</h1>
+<div mat-dialog-content>
+  <form class="form" [formGroup]="itemForm">
+    <p>
+      <mat-form-field class="example-full-width">
+        <input
+          matNativeControl
+          matInput
+          formControlName="title"
+          id="title"
+          name="title"
+          type="text"
+          placeholder="votre titre">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width">
+      <textarea
+        matInput
+        matNativeControl
+        formControlName="description"
+        id="description"
+        name="description"
+        type="text"
+        placeholder="votre description">
+      </textarea>
+      </mat-form-field>
+    </p>
+    <webcam [height]="500" [width]="500" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
+    <div mat-dialog-actions>
+      <button mat-flat-button
+              color="info"
+              (click)="onNoClick()"
+              [disabled]="!itemForm?.valid">
+        Add
+      </button>
+    </div>
+  </form>
+</div>
+
+
